@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Node to Web Test</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head
+
+<body>
+ <p>This is a test of interacting with Node.js from a web interface</p>
+   <br>
+
+   <p id="p2"></p>
+    <br>
+   <p id="p3"></p>
+    <br>
+   <p id="p4"></p>
+<script>
+       window.getTempFromServer = function() {
+         $.get('/get-temp')
+           .done(function(value2) {
+             console.log(value2)
+             document.getElementById("p2").innerHTML = "The current temperature in your house is: " + value2+''+"c";
+           })
+           .catch(function(err) {
+             console.log('uh oh')
+           });
+     }
+   </script>
+   <br>
+<script>
+  getTempFromServer();
+  setInterval(getTempFromServer,6000)
+</script>
+
+
+<script>
+       window.getLightFromServer = function() {
+         $.get('/get-light')
+           .done(function(value3) { 
+             console.log(value3) 
+             document.getElementById("p3").innerHTML = "The current light level in your house is: " + value3+'' + " Lux";
+           })
+           .catch(function(err) {
+             console.log('uh oh')
+           });
+     }
+   </script>
+   <br> <script>
+  getLightFromServer();
+  setInterval(getLightFromServer,6000)
+</script>
+
+<script>
+       window.waveFunction = function() { 
+         $.get('/wave')
+           .done(function(value4) {
+             console.log(value4)
+             document.getElementById("p4").innerHTML = "Waving";
+           })
+           .catch(function(err) {
+             console.log('uh oh')
+           });
+     }
+   </script>
+   <br>
+
+  <a href="#" onclick="waveFunction()">"click to wave"</a>
+
+</body>
+
+</html>

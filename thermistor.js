@@ -11,7 +11,7 @@ wave: function waveFunction() {
     var servo = new j5.Servo({ pin: 10, startAt: 90 });
  temporal.queue([
     {
-     delay: 5000,
+     delay: 9000,
      task: function() {
       console.log("Waving");
       servo.sweep([45, 135]);
@@ -70,12 +70,10 @@ board.on("ready", function(){
   });
 
   photoresistor.on("data", function(light1) {
-    console.log(light1);
     var luxCalc = convertVoltageToLux(light1);
 
     stats.currentLightLux = light1; // I added this because i want a scale in my homekit app :)
     stats.currentLight = luxCalc;
-    console.log("Current Lux: ", stats.currentLight);
    });
 
   thm.on("change",  function(thmVoltage) {
@@ -83,7 +81,6 @@ board.on("ready", function(){
     var temp = convertVoltToTemp(thmVoltage);
 
     stats.currentTemp = temp.tempK;
-    console.log("Current TempK: ", stats.currentTemp);
  });
 
 });

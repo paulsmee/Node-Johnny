@@ -16,7 +16,7 @@
    <p id="p4"></p>
 <script>
        window.getTempFromServer = function() {
-         $.get('/')
+         $.get('/get-temp')
            .done(function(value2) {
              console.log(value2)
              document.getElementById("p2").innerHTML = "The current temperature in your house is: " + value2+''+"c";
@@ -35,7 +35,7 @@
 
 <script>
        window.getLightFromServer = function() {
-         $.get('/')
+         $.get('/get-light')
            .done(function(value3) {
              console.log(value3)
              document.getElementById("p3").innerHTML = "The current light level in your house is: " + value3+'' + " Lux";

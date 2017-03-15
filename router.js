@@ -4,11 +4,11 @@ var express = require('express');
 var server = express();
 var devices = ('./sensor-light.js');
 
-server.route('/', function(req, res) {
+server.route('/get-temp', function(req, res) {
   res.send(stats.currentTemp+'');
 })
 
-  .post(function(req, res) {
+  .post('/get-light', function(req, res) {
   res.send(stats.currentLight+'');
 })
 

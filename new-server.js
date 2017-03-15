@@ -9,7 +9,7 @@ server.get('/stats', function(req, res) {
 })
 
 server.get('/', function(req, res) {
-  res.sendFile(__dirname + '/index.html');
+  res.sendFile(__dirname + '/index1.html');
   console.log("Access Detected!");
 });
 

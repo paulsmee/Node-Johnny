@@ -7,6 +7,7 @@
     "express": "^4.14.0",
     "johnny-five": "^0.10.6",
     "morgan": "^1.8.1",
+    "node-lirc": "0.0.4",
     "rotating-file-stream": "^1.1.9",
     "serialport": "^4.0.7"
   },

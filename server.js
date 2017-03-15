@@ -3,31 +3,15 @@
 var express = require('express');
 var server = express();
 var morgan = require('morgan');
-var fs = require('fs');
-var path = require('path')
-var rfs = require('rotating-file-stream')
 
 // !!! CHANGE HERE !!!
 var stats = require('./thermistor.js')
 
-var app = express()
-var logDirectory = path.join(__dirname, 'log')
-
-// ensure log directory exists
-fs.existsSync(logDirectory) || fs.mkdirSync(logDirectory)
-
-// create a rotating write stream
-var accessLogStream = rfs('access.log', {
-  interval: '1d', // rotate daily
-  path: logDirectory
-})
-
 // setup the logger
-app.use(morgan('combined', {stream: accessLogStream}))
+server.use(morgan('common'))
 
 // This should route the function for the temp sensor
 server.get('/get-temp', function(req, res) {
-  console.log(stats.currentTemp); 
   res.send(stats.currentTemp+''); // send the value to the browser
 })
 
@@ -48,6 +32,7 @@ server.get('/stats', function(req, res) {
 
 server.get('/', function(req, res) {
   res.sendFile(__dirname + '/index.html');
+console.log("Access Detected!");
 });
 
 var port = 8000

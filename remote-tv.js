@@ -1,9 +1,9 @@
 // Layout for the TV remote
 
-var lirc = require ('node-lirc');
+var nodeLIRC = require('node-lirc');
 
 function poweron() {
-
+  nodeLIRC.send("LG_AKB72915207", "KEY_POWER");
 }
 
 function volumeup() {
@@ -26,7 +26,7 @@ function mute() {
 
 }
 
-function 
+function
 
 
 });

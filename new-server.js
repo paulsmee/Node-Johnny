@@ -2,9 +2,10 @@
 
 var express = require('express');
 var server = express();
+var morgan = require('morgan');
 
+server.use(morgan('common'))
 server.use(express.static('public'));
-
 server.use(require('./router'));
 
 var port = 8000

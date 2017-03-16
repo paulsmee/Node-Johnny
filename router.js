@@ -2,7 +2,7 @@
 
 var express = require('express');
 var router = express.Router();
-var stats = require('./sensor-light')
+var stats = require('./sensor-light' && './sensor-temp');
 
 router.use(function timeLog(req, res, next) {
   console.log('Time: ', Date.now());
@@ -16,6 +16,10 @@ router.get('/', function(req, res) {
 
 router.get('/get-light', function(req, res) {
   res.send(stats.currentLight+'');
+})
+
+router.get('/get-temp', function(req, res) {
+  res.send(stats.currentTemp+'');
 })
 
 module.exports = router

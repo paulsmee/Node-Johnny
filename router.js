@@ -1,18 +1,21 @@
 // This file will handle all the routing for the server
 
 var express = require('express');
-var server = express();
-var devices = ('./sensor-light.js');
+var router = express.Router();
+var stats = require('./sensor-light')
 
-server.route('/get-temp', function(req, res) {
-  res.send(stats.currentTemp+'');
-})
+router.use(function timeLog(req, res, next) {
+  console.log('Time: ', Date.now());
+  next();
+});
 
-  .post('/get-light', function(req, res) {
+router.get('/', function(req, res) {
+  res.sendFile(__dirname + '/index1.html');
+  console.log("Access Detected!");
+});
+
+router.get('/get-light', function(req, res) {
   res.send(stats.currentLight+'');
 })
 
-  .post(function(req, res) {
-  console.log("got wave");
-  res.send(stats.wave());
-})
+module.exports = router

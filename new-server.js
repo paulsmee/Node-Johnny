@@ -2,16 +2,10 @@
 
 var express = require('express');
 var server = express();
-var router = require('./router.js');
 
-server.get('/stats', function(req, res) {
-  res.json(stats);
-})
+server.use(express.static('public'));
 
-server.get('/', function(req, res) {
-  res.sendFile(__dirname + '/index1.html');
-  console.log("Access Detected!");
-});
+server.use(require('./router'));
 
 var port = 8000
 server.listen(port, function() {

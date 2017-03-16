@@ -17,7 +17,7 @@ server.get('/get-temp', function(req, res) {
 
 // This should route the function for the light sensor
 server.get('/get-light', function(req, res) {
-  res.send(stats.currentLight+''); 
+  res.send(stats.currentLight+'');
 })
 
 // This should route the function for the waving servo

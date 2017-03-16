@@ -30,7 +30,7 @@ board.on("ready", function(){
       var luxCalc = convertVoltageToLux(light1);
 
       stats.currentLightLux = light1; // I added this because i want a scale in my homekit app :)
-      stats.currentLight = luxCalc;
+      stats.currentLight = luxCalc; // This is an accurate calculation for lux, 'light1' is just voltage.
      });
 });
 

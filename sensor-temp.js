@@ -1,7 +1,6 @@
 var j5 = require("johnny-five"),
-board;
 
-var board = new j5.Board();
+board = new j5.Board();
 
 const stats = {};
 

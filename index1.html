@@ -15,7 +15,19 @@
     <br>
    <p id="p4"></p>
     <br>
-   <p id="p6"></p>
+   <p id="p5"></p>
+   <br>
+  <p id="p6"></p>
+  <br>
+ <p id="p7"></p>
+ <br>
+<p id="p8"></p>
+<br>
+<p id="p9"></p>
+<br>
+<p id="p10"></p>
+<br>
+<p id="p11"></p>
 <script>
        window.getTempFromServer = function() {
          $.get('/get-temp')
@@ -74,7 +86,7 @@
          $.get('/remote')
            .done(function(value4) {
              console.log(value4)
-             document.getElementById("p6").innerHTML = "Power";
+             document.getElementById("p5").innerHTML = "Power";
            })
          .catch(function(err) {
            console.log('uh oh')
@@ -105,7 +117,7 @@
          $.get('/remote')
            .done(function(value4) {
              console.log(value4)
-             document.getElementById("p6").innerHTML = "Volume Down";
+             document.getElementById("p7").innerHTML = "Volume Down";
            })
            .catch(function(err) {
              console.log('uh oh')
@@ -121,7 +133,7 @@
          $.get('/remote')
            .done(function(value4) {
              console.log(value4)
-             document.getElementById("p6").innerHTML = "ChannelUp";
+             document.getElementById("p8").innerHTML = "ChannelUp";
            })
            .catch(function(err) {
              console.log('uh oh')
@@ -137,7 +149,7 @@
          $.get('/remote')
            .done(function(value4) {
              console.log(value4)
-             document.getElementById("p6").innerHTML = "Channel Downl";
+             document.getElementById("p9").innerHTML = "Channel Downl";
            })
            .catch(function(err) {
              console.log('uh oh')
@@ -153,7 +165,7 @@
          $.get('/remote')
            .done(function(value4) {
              console.log(value4)
-             document.getElementById("p6").innerHTML = "Muted";
+             document.getElementById("p10").innerHTML = "Muted";
            })
            .catch(function(err) {
              console.log('uh oh')

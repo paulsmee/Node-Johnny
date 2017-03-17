@@ -3,7 +3,7 @@ var temporal = require("temporal");
 
 var board = new j5.Board();
 
-const stats = {
+const servostats = {
 
 wave: function waveFunction() {
       var servo = new j5.Servo({ pin: 10, startAt: 90 });
@@ -32,4 +32,4 @@ board.on("ready", function(){
   var servo = new j5.Servo({ pin: 10, startAt: 90 });
 });
 
-module.exports = stats
+module.exports = servostats

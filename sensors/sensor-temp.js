@@ -2,7 +2,7 @@ var j5 = require("johnny-five"),
 
 board = new j5.Board();
 
-const stats = {};
+const tempstats = {};
 
 function convertVoltToTemp(volt) {
  var tempK;
@@ -28,9 +28,9 @@ board.on("ready", function(){
 
     var temp = convertVoltToTemp(thmVoltage);
 
-    stats.currentTemp = temp.tempK;
+    tempstats.currentTemp = temp.tempK;
  });
 
 });
 
-module.exports = stats
+module.exports = tempstats

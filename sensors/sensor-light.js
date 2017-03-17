@@ -3,7 +3,7 @@ board, photoresistor;
 
 var board = new j5.Board();
 
-const stats = {};
+const lightstats = {};
 
 // This is for the math to convert voltage to lux
 function convertVoltageToLux(lux) {
@@ -29,9 +29,9 @@ board.on("ready", function(){
     photoresistor.on("data", function(light1) {
       var luxCalc = convertVoltageToLux(light1);
 
-      stats.currentLightLux = light1; // I added this because i want a scale in my homekit app :)
-      stats.currentLight = luxCalc; // This is an accurate calculation for lux, 'light1' is just voltage.
+      lightstats.currentLightLux = light1; // I added this because i want a scale in my homekit app :)
+      lightstats.currentLight = luxCalc; // This is an accurate calculation for lux, 'light1' is just voltage.
      });
 });
 
-  module.exports = stats
+  module.exports = lightstats

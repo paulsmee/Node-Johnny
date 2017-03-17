@@ -10,16 +10,16 @@ router.get('/', function(req, res) {
 });
 
 router.get('/get-light', function(req, res) {
-  res.send(stats.currentLight+'');
+  res.send(lightstats.currentLight+'');
 })
 
 router.get('/get-temp', function(req, res) {
-  res.send(stats.currentTemp+'');
+  res.send(tempstats.currentTemp+'');
 })
 
 router.get('/wave', function(req, res) {
   console.log("got wave");
-  res.send(stats.wave());
+  res.send(servostats.wave());
 })
 
 router.get('/remote', function(req, res) {

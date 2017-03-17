@@ -84,8 +84,8 @@
 <script>
        window.powerOn = function() {
          $.get('/remote')
-           .done(function(value4) {
-             console.log(value4)
+           .done(function() {
+             console.log()
              document.getElementById("p5").innerHTML = "Power";
            })
          .catch(function(err) {
@@ -94,13 +94,13 @@
      }
 </script>
    <br>
-<a href="#" onclick="powerOn()">"Power Button"</a>
+<a href="1" onclick="powerOn()">Power Button</a>
 
 <script>
        window.volumeUp = function() {
          $.get('/remote')
-           .done(function(value4) {
-             console.log(value4)
+           .done(function() {
+             console.log()
              document.getElementById("p6").innerHTML = "Volume Up";
            })
            .catch(function(err) {
@@ -110,13 +110,13 @@
 </script>
  <br>
 
-<a href="#" onclick="volumeUp()">"Volume Up"</a>
+<a href="2" onclick="volumeUp()">Volume Up</a>
 
 <script>
        window.volumeDown = function() {
          $.get('/remote')
-           .done(function(value4) {
-             console.log(value4)
+           .done(function() {
+             console.log()
              document.getElementById("p7").innerHTML = "Volume Down";
            })
            .catch(function(err) {
@@ -124,15 +124,15 @@
            });
       }
 </script>
-   <br>
+   <!-- <br>
 
-<a href="#" onclick="volumeDown()">"Volume Down"</a>
+<a href="#" onclick="volumeDown()">Volume Down</a>
 
 <script>
        window.channelUp = function() {
          $.get('/remote')
-           .done(function(value4) {
-             console.log(value4)
+           .done(function() {
+             console.log()
              document.getElementById("p8").innerHTML = "ChannelUp";
            })
            .catch(function(err) {
@@ -142,13 +142,13 @@
 </script>
  <br>
 
-<a href="#" onclick="channelUp()">"Channel Up"</a>
+<a href="#" onclick="channelUp()">Channel Up</a>
 
 <script>
        window.channelDown = function() {
          $.get('/remote')
-           .done(function(value4) {
-             console.log(value4)
+           .done(function() {
+             console.log()
              document.getElementById("p9").innerHTML = "Channel Downl";
            })
            .catch(function(err) {
@@ -158,13 +158,13 @@
 </script>
  <br>
 
-<a href="#" onclick="channelDown()">"Channel Down"</a>
+<a href="#" onclick="channelDown()">Channel Down</a>
 
 <script>
        window.mute = function() {
          $.get('/remote')
-           .done(function(value4) {
-             console.log(value4)
+           .done(function() {
+             console.log()
              document.getElementById("p10").innerHTML = "Muted";
            })
            .catch(function(err) {
@@ -174,7 +174,7 @@
 </script>
  <br>
 
-<a href="#" onclick="mute()">"Mute"</a>
+<a href="#" onclick="mute()">Mute</a> -->
 
 </body>
 

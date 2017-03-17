@@ -2,7 +2,10 @@
 
 var express = require('express');
 var router = express.Router();
-var stats = require('./thermistor' && './sensors/sensor-light' && './sensors/sensor-temp' && './sensors/sensor-servo' && './remotes/remote-tv');
+var lightstats = require('./sensors/sensor-light');
+var tempstats = require('./sensors/sensor-temp');
+var servostats = require('./sensors/sensor-servo');
+var remotecontrol = require('./remotes/remote-tv');
 
 router.get('/', function(req, res) {
   res.sendFile(__dirname + '/index1.html');

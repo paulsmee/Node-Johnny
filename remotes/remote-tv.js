@@ -12,7 +12,7 @@ power: function powerOn() {
 
 volume: function volumeUp() {
   nodeLIRC.send("LG_AKB72915207", "KEY_VOLUMEUP");
-};
+}
 };
 
 

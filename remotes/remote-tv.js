@@ -13,27 +13,27 @@ function powerOn() {
 
 function volumeUp() {
   nodeLIRC.send("LG_AKB72915207", "KEY_VOLUMEUP");
-  remotecontrol.powerOn = volumeUp;
+  remotecontrol.volumeUp = volumeUp;
 };
 
 function volumeDown() {
   nodeLIRC.send("LG_AKB72915207", "KEY_VOLUMEDOWN");
-  remotecontrol.powerOn = volumeDown;
+  remotecontrol.volumeDown = volumeDown;
 };
 
 function channelUp() {
   nodeLIRC.send("LG_AKB72915207", "KEY_CHANNELUP");
-  remotecontrol.powerOn = channelUp;
+  remotecontrol.channelUp = channelUp;
 };
 
 function channelDown() {
   nodeLIRC.send("LG_AKB72915207", "KEY_CHANNELDOWN");
-  remotecontrol.powerOn = channelDown;
+  remotecontrol.channelDown = channelDown;
 };
 
 function mute() {
   nodeLIRC.send("LG_AKB72915207", "mute");
-  remotecontrol.powerOn = mute;
+  remotecontrol.mute = mute;
 };
 
 

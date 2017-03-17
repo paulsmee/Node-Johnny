@@ -5,7 +5,7 @@ var router = express.Router();
 var lightstats = require('./sensors/sensor-light');
 var tempstats = require('./sensors/sensor-temp');
 var servostats = require('./sensors/sensor-servo');
-var remotecontrol = require('./remotes/remote-tv');
+// var remotecontrol = require('./remotes/remote-tv');
 
 router.get('/', function(req, res) {
   res.sendFile(__dirname + '/index1.html');
@@ -25,34 +25,34 @@ router.get('/wave', function(req, res) {
   res.send(servostats.wave());
 })
 
-router.get('/remote', function(req, res) {
-  console.log("TV Power Request");
-  res.send(remotecontrol.powerOn());
-})
-
-router.get('/remote', function(req, res) {
-  console.log("TV Request");
-  res.send(remotecontrol.volumeUp());
-})
-
-router.get('/remote', function(req, res) {
-  console.log("TV Request");
-  res.send(remotecontrol.volumeDown());
-})
-
-router.get('/remote', function(req, res) {
-  console.log("TV Request");
-  res.send(remotecontrol.channelUp());
-})
-
-router.get('/remote', function(req, res) {
-  console.log("TV Request");
-  res.send(remotecontrol.channelDown());
-})
-
-router.get('/remote', function(req, res) {
-  console.log("TV Request");
-  res.send(remotecontrol.mute());
-})
+// router.get('/remote', function(req, res) {
+//   console.log("TV Power Request");
+//   res.send(remotecontrol.powerOn());
+// })
+//
+// router.get('/remote', function(req, res) {
+//   console.log("TV Request");
+//   res.send(remotecontrol.volumeUp());
+// })
+//
+// router.get('/remote', function(req, res) {
+//   console.log("TV Request");
+//   res.send(remotecontrol.volumeDown());
+// })
+//
+// router.get('/remote', function(req, res) {
+//   console.log("TV Request");
+//   res.send(remotecontrol.channelUp());
+// })
+//
+// router.get('/remote', function(req, res) {
+//   console.log("TV Request");
+//   res.send(remotecontrol.channelDown());
+// })
+//
+// router.get('/remote', function(req, res) {
+//   console.log("TV Request");
+//   res.send(remotecontrol.mute());
+// })
 
 module.exports = router

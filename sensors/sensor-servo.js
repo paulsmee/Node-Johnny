@@ -1,7 +1,7 @@
 var j5 = require("johnny-five");
 var temporal = require("temporal");
 
-var board = new j5.Board();
+board = new j5.Board();
 
 const servostats = {
 

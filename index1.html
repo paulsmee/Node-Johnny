@@ -14,6 +14,8 @@
    <p id="p3"></p>
     <br>
    <p id="p4"></p>
+    <br>
+   <p id="p6"></p>
 <script>
        window.getTempFromServer = function() {
          $.get('/get-temp')
@@ -43,9 +45,10 @@
            .catch(function(err) {
              console.log('uh oh')
            });
-     }
-   </script>
-   <br> <script>
+      }
+</script>
+   <br>
+<script>
   getLightFromServer();
   setInterval(getLightFromServer,6000)
 </script>
@@ -60,11 +63,106 @@
            .catch(function(err) {
              console.log('uh oh')
            });
+      }
+</script>
+ <br>
+
+<a href="#" onclick="waveFunction()">"click to wave"</a>
+
+<script>
+       window.powerOn = function() {
+         $.get('/remote')
+           .done(function(value4) {
+             console.log(value4)
+             document.getElementById("p6").innerHTML = "Power";
+           })
+         .catch(function(err) {
+           console.log('uh oh')
+         });
      }
-   </script>
+</script>
+   <br>
+<a href="#" onclick="powerOn()">"Power Button"</a>
+
+<script>
+       window.volumeUp = function() {
+         $.get('/remote')
+           .done(function(value4) {
+             console.log(value4)
+             document.getElementById("p6").innerHTML = "Volume Up";
+           })
+           .catch(function(err) {
+             console.log('uh oh')
+           });
+      }
+</script>
+ <br>
+
+<a href="#" onclick="volumeUp()">"Volume Up"</a>
+
+<script>
+       window.volumeDown = function() {
+         $.get('/remote')
+           .done(function(value4) {
+             console.log(value4)
+             document.getElementById("p6").innerHTML = "Volume Down";
+           })
+           .catch(function(err) {
+             console.log('uh oh')
+           });
+      }
+</script>
    <br>
 
-  <a href="#" onclick="waveFunction()">"click to wave"</a>
+<a href="#" onclick="volumeDown()">"Volume Down"</a>
+
+<script>
+       window.channelUp = function() {
+         $.get('/remote')
+           .done(function(value4) {
+             console.log(value4)
+             document.getElementById("p6").innerHTML = "ChannelUp";
+           })
+           .catch(function(err) {
+             console.log('uh oh')
+           });
+      }
+</script>
+ <br>
+
+<a href="#" onclick="channelUp()">"Channel Up"</a>
+
+<script>
+       window.channelDown = function() {
+         $.get('/remote')
+           .done(function(value4) {
+             console.log(value4)
+             document.getElementById("p6").innerHTML = "Channel Downl";
+           })
+           .catch(function(err) {
+             console.log('uh oh')
+           });
+      }
+</script>
+ <br>
+
+<a href="#" onclick="channelDown()">"Channel Down"</a>
+
+<script>
+       window.mute = function() {
+         $.get('/remote')
+           .done(function(value4) {
+             console.log(value4)
+             document.getElementById("p6").innerHTML = "Muted";
+           })
+           .catch(function(err) {
+             console.log('uh oh')
+           });
+      }
+</script>
+ <br>
+
+<a href="#" onclick="mute()">"Mute"</a>
 
 </body>
 

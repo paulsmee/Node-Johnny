@@ -16,13 +16,8 @@ volume: function volumeUp() {
 };
 
 
-var powerOn = powerOn();
-var volumeUp = volumeUp();
-
-
-
-remotecontrol.power = powerOn;
-remotecontrol.vUp = volumeUp;
+remotecontrol.power = powerOn();
+remotecontrol.volume = volumeUp();
 
 
 

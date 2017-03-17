@@ -27,32 +27,12 @@ router.get('/wave', function(req, res) {
 
 router.get('/remote', function(req, res) {
   console.log("TV Power Request");
-  res.send(remotecontrol.powerOn());
+  res.send(remotecontrol.power());
 })
 
-router.get('/remote', function(req, res) {
-  console.log("TV Request");
-  res.send(remotecontrol.volumeUp());
-})
-
-router.get('/remote', function(req, res) {
-  console.log("TV Request");
-  res.send(remotecontrol.volumeDown());
-})
-
-router.get('/remote', function(req, res) {
-  console.log("TV Request");
-  res.send(remotecontrol.channelUp());
-})
-
-router.get('/remote', function(req, res) {
-  console.log("TV Request");
-  res.send(remotecontrol.channelDown());
-})
-
-router.get('/remote', function(req, res) {
-  console.log("TV Request");
-  res.send(remotecontrol.mute());
+router.get('/remotes', function(req, res) {
+  console.log("TV  Request");
+  res.send(remotecontrol.volume());
 })
 
 module.exports = router

@@ -27,7 +27,7 @@ function channelDown() {
 };
 
 function mute() {
-  nodeLIRC.send("LG_AKB72915207", "mute");
+  nodeLIRC.send("LG_AKB72915207", "KEY_CHANNELDOWN");
 };
 
 var powerOn = powerOn();

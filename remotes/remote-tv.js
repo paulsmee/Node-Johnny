@@ -4,17 +4,18 @@ var nodeLIRC = require('node-lirc');
 
 nodeLIRC.init();
 
-const remotecontrol = {
+const remotecontrol = {},
 
-power: function powerOn() {
+function powerOn() {
   nodeLIRC.send("LG_AKB72915207****", "KEY_POWER");
 },
 
-volume: function volumeUp() {
+function volumeUp() {
   nodeLIRC.send("LG_AKB72915207", "KEY_VOLUMEUP");
 }
-};
 
+var power = powerOn();
+var volume = volumeUp();
 
 remotecontrol.power = power;
 remotecontrol.volume = volume;

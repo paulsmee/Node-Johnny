@@ -10,11 +10,12 @@ function powerOn() {
   nodeLIRC.send("LG_AKB72915207", "KEY_VOLUMEDOWN");
 };
 
+remotecontrol.power = powerOn;
+
 function volumeUp() {
   nodeLIRC.send("LG_AKB72915207", "KEY_VOLUMEUP");
 };
 
-remotecontrol.power = powerOn;
 remotecontrol.volume = volumeUp;
 
 

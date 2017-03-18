@@ -4,7 +4,7 @@ var nodeLIRC = require('node-lirc');
 
 nodeLIRC.init();
 
-const remotecontrol = {},
+const remotecontrol = {};
 
 function powerOn() {
   nodeLIRC.send("LG_AKB72915207****", "KEY_POWER");

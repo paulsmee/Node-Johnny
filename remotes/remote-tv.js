@@ -14,11 +14,8 @@ function volumeUp() {
   nodeLIRC.send("LG_AKB72915207", "KEY_VOLUMEUP");
 };
 
-var power = powerOn();
-var volume = volumeUp();
-
-remotecontrol.power = power;
-remotecontrol.volume = volume;
+remotecontrol.power = powerOn;
+remotecontrol.volume = volumeUp;
 
 
 

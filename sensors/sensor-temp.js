@@ -1,6 +1,6 @@
 var j5 = require("johnny-five"),
 
-var tempBoard = new j5.Board();
+tempBoard = new j5.Board();
 
 const tempstats = {};
 

@@ -1,6 +1,6 @@
 var j5 = require("johnny-five"),
 
-tempBoard = new j5.Board();
+board = new j5.Board();
 
 const tempstats = {};
 
@@ -21,7 +21,7 @@ function convertVoltToTemp(volt) {
   };
 }
 
-tempBoard.on("ready", function(){
+board.on("ready", function(){
   var thm = new j5.Sensor({ pin: "A0", freq: 500 });
 
   thm.on("change",  function(thmVoltage) {

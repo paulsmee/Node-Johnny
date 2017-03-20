@@ -7,11 +7,11 @@ nodeLIRC.init();
 const remotecontrol = {};
 
 function powerOn() {
-  nodeLIRC.send("LG_AKB72915207", "KEY_VOLUMEDOWN");
+  nodeLIRC.send("LG_AKB72915207***", "KEY_VOLUMEDOWN");
 };
 
 function volumeUp() {
-  nodeLIRC.send("LG_AKB72915207", "KEY_VOLUMEUP");
+  nodeLIRC.send("LG_AKB72915207*****", "KEY_VOLUMEUP");
 };
 
 remotecontrol.power = powerOn;

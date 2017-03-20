@@ -1,7 +1,7 @@
 var j5 = require("johnny-five"),
 board, photoresistor;
 
-board = new j5.Board();
+var board = new j5.Board();
 
 const lightstats = {};
 

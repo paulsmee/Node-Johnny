@@ -1,7 +1,6 @@
-var j5 = require("johnny-five"),
-board, photoresistor;
+board = require('../j5.js')
 
-var board = new j5.Board();
+var photoresistor;
 
 const lightstats = {};
 
@@ -20,7 +19,7 @@ function convertVoltageToLux(lux) {
  }
 
 board.on("ready", function(){
-  photoresistor = new j5.Sensor({ pin: "A2", freq: 5000 });
+photoresistor = new j5.Sensor({ pin: "A2", freq: 5000 });
 
   board.repl.inject({
     pot: photoresistor

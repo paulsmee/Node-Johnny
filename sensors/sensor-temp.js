@@ -1,6 +1,4 @@
-var j5 = require("johnny-five"),
-
-board = new j5.Board();
+board = require('../j5.js')
 
 const tempstats = {};
 

@@ -1,4 +1,7 @@
-board = require('../j5.js')
+'use strict';
+
+var board = require('../j5.js');
+var j5 = require("johnny-five");
 
 var photoresistor;
 

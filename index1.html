@@ -21,7 +21,7 @@
 
 <script>
        window.getTempFromServer = function() {
-         $.get('/get-temp')
+         $.get('/sensor/temp/lounge')
            .done(function(value2) {
              console.log(value2)
              document.getElementById("p2").innerHTML = "The current temperature in your house is: " + value2+''+"c";
@@ -40,7 +40,7 @@
 
 <script>
        window.getLightFromServer = function() {
-         $.get('/get-light')
+         $.get('/sensor/light/lounge')
            .done(function(value3) {
              console.log(value3)
              document.getElementById("p3").innerHTML = "The current light level in your house is: " + value3+'' + " Lux";
@@ -58,7 +58,7 @@
 
 <script>
        window.waveFunction = function() {
-         $.get('/wave')
+         $.get('/actuator/servo/wave')
            .done(function(value4) {
              console.log(value4)
              document.getElementById("p4").innerHTML = "Waving";
@@ -74,7 +74,7 @@
 
 <script>
        window.powerOn = function() {
-         $.get('/remote')
+         $.get('/remote/tv/power')
            .done(function() {
              console.log()
              document.getElementById("p5").innerHTML = "Power";
@@ -89,7 +89,7 @@
 
 <script>
        window.volumeUp = function() {
-         $.get('/remotes')
+         $.get('/remote/tv/volumeup')
            .done(function() {
              console.log()
              document.getElementById("p6").innerHTML = "Volume Up";

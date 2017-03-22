@@ -70,7 +70,8 @@
 </script>
  <br>
 
-<a href="#" onclick="waveFunction()">"click to wave"</a>
+<button ><a href="#" onclick="waveFunction()">"click to wave"</a></button>
+<br>
 
 <script>
        window.powerOn = function() {
@@ -85,7 +86,8 @@
      }
 </script>
    <br>
-<a href="#" onclick="powerOn()">"Power Button"</a>
+<button><a href="#" onclick="powerOn()">"Power Button"</a></button>
+<br>
 
 <script>
        window.volumeUp = function() {
@@ -101,7 +103,76 @@
 </script>
  <br>
 
-<a href="#" onclick="volumeUp()">"Volume Up"</a>
+<button><a href="#" onclick="volumeUp()">"Volume Up"</a></button>
+<br>
+
+<script>
+       window.volumeDown = function() {
+         $.get('/remote/tv/volumedown')
+           .done(function() {
+             console.log()
+             document.getElementById("p6").innerHTML = "Volume Down";
+           })
+           .catch(function(err) {
+             console.log('uh oh')
+           });
+      }
+</script>
+ <br>
+
+<button><a href="#" onclick="volumeDown()">"Volume Down"</a></button>
+<br>
+
+<script>
+       window.channelUp = function() {
+         $.get('/remote/tv/channelup')
+           .done(function() {
+             console.log()
+             document.getElementById("p6").innerHTML = "Channel Up";
+           })
+           .catch(function(err) {
+             console.log('uh oh')
+           });
+      }
+</script>
+ <br>
+
+<button><a href="#" onclick="channelUp()">"Channel Up"</a></button>
+<br>
+
+<script>
+       window.channelDown = function() {
+         $.get('/remote/tv/channeldown')
+           .done(function() {
+             console.log()
+             document.getElementById("p6").innerHTML = "Channel Down";
+           })
+           .catch(function(err) {
+             console.log('uh oh')
+           });
+      }
+</script>
+ <br>
+
+<button><a href="#" onclick="channelDown()">"Channel Down"</a></button>
+<br>
+
+<script>
+       window.mute = function() {
+         $.get('/remote/tv/mute')
+           .done(function() {
+             console.log()
+             document.getElementById("p6").innerHTML = "Mute";
+           })
+           .catch(function(err) {
+             console.log('uh oh')
+           });
+      }
+</script>
+ <br>
+
+<button><a href="#" onclick="mute()">"Mute"</a></button>
+<br>
 
 </body>
 

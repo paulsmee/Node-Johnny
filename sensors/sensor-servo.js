@@ -1,7 +1,8 @@
+'use strict';
+
+var board = require('../j5.js');
 var j5 = require("johnny-five");
 var temporal = require("temporal");
-
-board = new j5.Board();
 
 const servostats = {
 

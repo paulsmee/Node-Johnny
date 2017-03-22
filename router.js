@@ -8,29 +8,29 @@ var servostats = require('./sensors/sensor-servo');
 var remotecontrol = require('./remotes/remote-tv');
 
 router.get('/', function(req, res) {
-  res.sendFile(__dirname + '/index1.html');
+  res.sendFile(__dirname + '/testindex.html');
   console.log("Access Detected!");
 });
 
-router.get('/get-light', function(req, res) {
+router.get('/sensor/light/lounge', function(req, res) {
   res.send(lightstats.currentLight+'');
 })
 
-router.get('/get-temp', function(req, res) {
+router.get('/sensor/temp/lounge', function(req, res) {
   res.send(tempstats.currentTemp+'');
 })
 
-router.get('/wave', function(req, res) {
+router.get('/actuator/servo/wave', function(req, res) {
   console.log("got wave");
   res.send(servostats.wave());
 })
 
-router.get('/remote', function(req, res) {
+router.get('/remote/tv/power', function(req, res) {
   console.log("TV Power Request");
   res.send(remotecontrol.power());
 })
 
-router.get('/remotes', function(req, res) {
+router.get('/remote/tv/volumeup', function(req, res) {
   console.log("TV  Request");
   res.send(remotecontrol.volume());
 })

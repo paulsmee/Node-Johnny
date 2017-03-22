@@ -30,7 +30,7 @@ function mute() {
   nodeLIRC.send("LG_AKB72915207mute", "MUTE");
 };
 
-remotecontrol.power = powerOn;
+remotecontrol.power = power;
 remotecontrol.volumeup = volumeUp;
 remotecontrol.volumedown = volumeDown;
 remotecontrol.channelup = channelUp;

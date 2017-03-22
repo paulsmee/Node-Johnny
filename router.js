@@ -32,7 +32,27 @@ router.get('/remote/tv/power', function(req, res) {
 
 router.get('/remote/tv/volumeup', function(req, res) {
   console.log("TV  Request");
-  res.send(remotecontrol.volume());
+  res.send(remotecontrol.volumeup());
+})
+
+router.get('/remote/tv/volumedown', function(req, res) {
+  console.log("TV Power Request");
+  res.send(remotecontrol.volumedown());
+})
+
+router.get('/remote/tv/channelup', function(req, res) {
+  console.log("TV  Request");
+  res.send(remotecontrol.channelup());
+})
+
+router.get('/remote/tv/channeldown', function(req, res) {
+  console.log("TV Power Request");
+  res.send(remotecontrol.channeldown());
+})
+
+router.get('/remote/tv/mute', function(req, res) {
+  console.log("TV  Request");
+  res.send(remotecontrol.mute());
 })
 
 module.exports = router

@@ -30,8 +30,7 @@ board.on("ready", function(){
     var temp = convertVoltToTemp(thmVoltage);
 
     tempstats.currentTemp = temp.tempK;
-    console.log(tempstats.currentTemp)
- });
+  });
 
 });
 
